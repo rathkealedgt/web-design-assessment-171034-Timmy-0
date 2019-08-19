@@ -1,0 +1,78 @@
+﻿body {
+    margin: auto;
+    padding: 50px;
+    color: #000000;
+    background-color: mediumpurple;
+    font-family: 'Lato', sans-serif;
+}
+
+/*---- grid setup start ----*/
+
+.wrapper {
+    display:grid;
+    grid-template-columns: 1fr 3fr 2fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "logo banner banner"
+        "nav nav nav"
+        "main main side"
+        "footer footer footer";
+    grid-gap: 4px;
+}
+
+/*---- grid setup end ----*/
+
+/*---- area styling  start ----*/
+
+.box {
+    border: solid 1px #000000;
+    padding: 50px;
+    background-color: lightgray;
+}
+/*--- Area Colouring ---*/
+
+/** .logo, .banner, footer backgrounds are the same**/
+.logo, .banner, .footer{
+    background-color:#44aCa9;
+    color:red;
+}
+/** .nav, .side backgrounds are the same**/
+.nav, .side {
+    background-color:#b6ff00;
+    Color: blue;
+}
+
+.main {
+    background-color: white;
+    Color: black;
+}
+
+/*--- Area Specific ---*/
+.logo {
+    grid-area: logo;
+    text-align: center;
+    
+}
+
+.banner {
+    grid-area: banner;
+}
+
+.nav {
+    grid-area: nav;
+}
+
+.main {
+    grid-area: main;
+}
+
+.side {
+    grid-area: side;
+}
+
+.footer {
+    grid-area: footer;
+    text-align: center;
+}
+
+/*---- area styling end ----*/      
